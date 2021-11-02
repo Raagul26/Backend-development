@@ -50,7 +50,6 @@ public class EmployeeController {
             employeeService.createManyEmployees(employees);
             response.setStatus("success");
             response.setMessage("Records Created Successfully");
-            response.setMessage("hello");
             return new ResponseEntity<>(response, HttpStatus.CREATED);
         }
         catch (Exception e)
