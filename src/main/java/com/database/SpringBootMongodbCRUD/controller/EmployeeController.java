@@ -27,6 +27,9 @@ public class EmployeeController {
         APIResponse response = new APIResponse();
         try
         {
+            employeeService.createOneEmployee(employee);
+            response.setStatus("success");
+            response.setMessage("Record Created Successfully");
             return new ResponseEntity<>(response, HttpStatus.CREATED);
         }
         catch (Exception e)
